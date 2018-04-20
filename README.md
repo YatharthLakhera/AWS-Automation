@@ -1,13 +1,13 @@
 # AWS-Automation
 The script is for automating the starting and stopping of EC2 instances for AWS in ordered fashion using AWS cli.
 
-**Requirement :
+**Requirement :**
 
 It is recommended to use Python version greater or equal to 3.5 as the 
 subprocess.run() function used in the program was added in Python 3.5 
 so versions older than 3.5 will through exception on running this script.
 
-**Assumption :
+**Assumption :**
 
 > This script does not wait for the instance to start or stop.
 > The script starts or stops the instance and move to next,  
@@ -18,7 +18,7 @@ so versions older than 3.5 will through exception on running this script.
 > and thus the instance state will change in the same order
 > in which they are give to the program. 
 
-**Using Program :
+**Using Program :**
 
 create the class object with the instance_list given as parameters
 
@@ -50,13 +50,13 @@ Now calling _instance()_ function :
     > The instance given in the function do not affect the initially given
     > in the class object.
 
-**Program Details :
+**Program Details :**
 
 Now, the program is fairly simple. It contains one function
 
 Class :
 
-*EC2_services(aws_cloud_instance, splt)
+*EC2_services(aws_cloud_instance, splt)*
 
 1. _aws_cloud_instance : String type
    This argument takes string containing the list of instance 
@@ -67,7 +67,7 @@ Class :
    instance in the first argument is separated
    Its default value is comma(,)
 
-*Function Prototype :
+*Function Prototype :*
 
 - instance(process, instance_list, splt)
 
