@@ -58,11 +58,11 @@ Class :
 
 *EC2_services(aws_cloud_instance, splt)*
 
-1. _aws_cloud_instance : String type
+1. _aws_cloud_instance_ : String type
    > This argument takes string containing the list of instance 
    > separated by a delimiter. Instance should be in 
    > the order which they need to be started or stopped.
-2. _splt : String type(optional)
+2. _splt_ : String type(optional)
    > This argument takes the delimiter by which the list of
    > instance in the first argument is separated
    > Its default value is comma(,)
@@ -71,13 +71,13 @@ Class :
 
 - instance(process, instance_list, splt)
 
-1. _process : String type
+1. _process_ : String type
    > This agruments takes the state to which you want to change the instance state
    >  - start : means the instance given will change to start state 
    >  - stop : means the instance given will change to stop state
    >  - status : will give the current status of the given instances
 
-2. _instance_list : String type(Optional)
+2. _instance_list_ : String type(Optional)
    > This argument takes string containing the list of instance 
    > separated by a delimiter. Instance should be in the order
    > which they need to be started or stopped. Instance list given 
@@ -88,7 +88,7 @@ Class :
    >        started and after starting you need to know a one or more
    >        instance status without changing inital list, this help to
    >        achieve this.
-3. _split : String type(Optional)
+3. _split_ : String type(Optional)
    > This argument takes the delimiter by which the list of
    > instance in the instance list argument is separated
    > Its default value is comma(,) 
