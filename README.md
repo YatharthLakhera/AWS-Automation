@@ -7,6 +7,11 @@ It is recommended to use Python version greater or equal to 3.5 as the
 subprocess.run() function used in the program was added in Python 3.5 
 so versions older than 3.5 will through exception on running this script.
 
+AWS CLI should be installed and configured with the AWS account before 
+using this script. Please refer the following links for more information :
+- [Installing the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
+- [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
+
 **Assumption :**
 
 > This script does not wait for the instance to start or stop.
