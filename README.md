@@ -23,30 +23,30 @@ so versions older than 3.5 will through exception on running this script.
 create the class object with the instance_list given as parameters
 
 With delimiter in the _instance_list_ string as ',' : 
-  '''
+  ```
   instance_list = "i-b079f1cffd958d6aa,i-20be8080fda613954,i-9e1f6827c43e770bd"
   aws = EC2_sevices(instance_list)
-  '''
+  ```
 With delimiter in the _instance_list_ string other than ',' : 
-  '''
+  ```
   instance_list = "i-b079f1cffd958d6aa i-20be8080fda613954 i-9e1f6827c43e770bd"
   aws = EC2_sevices(instance_list, ' ')
-  '''  
+  ``` 
 Now calling _instance()_ function :
 
 1. _To start, stop or get status of the above instance :_
-    '''
+    ```
      aws.instance("start")
      aws.instance("stop")
      aws.instance("status")
-     '''
+     ```
 2. _To start, stop or get status for instance :_
-    ''' 
+    ``` 
     aws.instance("start") # will start the list of the instance given in class obj
     aws.instance("status","i-b079f1cffd958d6aa,i-20be8080fda613954")
     aws.instance("stop","i-b079f1cffd958d6aa i-20be8080fda613954"," ")
     aws.instance("stop") # will stop the list of the instance given in class obj
-    '''
+    ```
     > The instance given in the function do not affect the initially given
     > in the class object.
 
