@@ -88,7 +88,7 @@ Class :
    >        started and after starting you need to know a one or more
    >        instance status without changing inital list, this help to
    >        achieve this.
-3. _split_ : String type(Optional)
+3. _splt_ : String type(Optional)
    > This argument takes the delimiter by which the list of
    > instance in the instance list argument is separated
    > Its default value is comma(,) 
