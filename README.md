@@ -12,6 +12,8 @@ using this script. Please refer the following links for more information :
 - [Installing the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
 - [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
 
+_Python Library required_ : json, sys, os, subprocess, time
+
 **Assumption :**
 
 > This script does not wait for the instance to start or stop.
