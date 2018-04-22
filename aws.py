@@ -68,11 +68,11 @@ class EC2_sevices :
 
 					if(instance_status == "pending") : 
 						instance_status = "started"
+						
+					print("Instance {0}({1}) : {2} (Time Taken : {3:.2f} seconds)".format(count, instance,
+					 instance_status, time.time()-start_time))
 				
 				except :
 					instance_status = "waiting"	
-				
-				print("Instance {0}({1}) : {2} (Time Taken : {3:.2f} seconds)".format(count, instance,
-					 instance_status, time.time()-start_time))
 
 			count += 1
