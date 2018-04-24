@@ -19,10 +19,9 @@ class EC2_sevices :
 	def instance(self, process="status", instance_list = "", splt=",") :
 
 		# Choosing the instances to be processed
+		aws_cloud_instance_list = self.aws_cloud_instance
 		if (instance_list != "") : 
 			aws_cloud_instance_list = instance_list.split(splt)
-		else :
-			aws_cloud_instance_list = self.aws_cloud_instance
 
 		count = 1
 		for instance in aws_cloud_instance_list :
@@ -44,17 +43,20 @@ class EC2_sevices :
 					# Executing aws cli for starting instance and getting response
 					if(process == "start") : 
 						instance_process = "start-instances"
-						instance_state = "StartingInstances"
+						response_ob1 = "StartingInstances"
+						response_ob2 = "CurrentState"
 
 					# Executing aws cli for stopping instance and getting response
 					elif(process == "stop") :
 						instance_process = "stop-instances"
-						instance_state = "StoppingInstances"
+						response_ob1 = "StoppingInstances"
+						response_ob2 = "CurrentState"
 
 					# Executing aws cli for getting instance status
 					elif(process == "status") : 
 						instance_process = "describe-instance-status"
-						instance_state = "InstanceStatuses"
+						response_ob1 = "InstanceStatuses"
+						response_ob2 = "InstanceState"
 
 					else :
 						print("Invalid instance state given in function arguments!")
@@ -64,7 +66,7 @@ class EC2_sevices :
 						'--instance-ids', instance], stdout=subprocess.PIPE)
 
 					output = json.loads(read.stdout.decode("utf-8"))
-					instance_status = output[instance_state][0]["CurrentState"]["Name"]
+					instance_status = output[response_ob1][0][response_ob2]["Name"]
 
 					if(instance_status == "pending") : 
 						instance_status = "started"
