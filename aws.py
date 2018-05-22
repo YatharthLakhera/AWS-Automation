@@ -65,6 +65,7 @@ class EC2_sevices :
 					'--instance-ids', instance], stdout=subprocess.PIPE)
 				except :
 					instance_status = "waiting"
+					continue
 
 				output = json.loads(read.stdout.decode("utf-8"))
 				try :
